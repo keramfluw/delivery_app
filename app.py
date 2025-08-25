@@ -100,7 +100,7 @@ def make_excel(project, df_components):
     output.seek(0)
     return output
 
-st.title('PV-Übergabe & Komponentenregister – Vor-Ort-App')
+st.title('PV-Übergabe & Komponentenregister – Qrauts AG')
 
 with st.sidebar:
     st.header('Projekt-Metadaten')
