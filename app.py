@@ -130,6 +130,19 @@ st.subheader('2) Komponentenregister – Pflichtangaben & sinnvolle Ergänzungen
 if 'df_components' not in st.session_state:
     st.session_state.df_components = df_default()
 
+date_columns = [
+    'Herstellungsdatum',
+    'Lieferdatum',
+    'Rechnungsdatum',
+    'Inbetriebnahmedatum',
+    'Garantiebeginn'
+]
+
+for col in date_columns:
+    if col in st.session_state.df_components.columns:
+        st.session_state.df_components[col] = pd.to_datetime(
+            st.session_state.df_components[col], errors='coerce'
+        )
 edited_df = st.data_editor(
     st.session_state.df_components,
     num_rows='dynamic',
