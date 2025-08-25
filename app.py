@@ -198,4 +198,4 @@ with colB:
         excel = make_excel(project, st.session_state.df_components)
         st.download_button('Excel herunterladen', data=excel.getvalue(), file_name=f"{projekt_nr or 'projekt'}_Komponentenregister.xlsx", mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
-st.caption('© 2025 – Vor-Ort-App für PV-Übergabe & Komponentenregister')
+st.caption('© 2025 – Qrauts AG PV-Übergabe & Komponentenregister')
