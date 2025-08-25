@@ -1,17 +1,27 @@
+
 # PV-Übergabe & Komponentenregister – Vor-Ort-App
 
-**Hinweis zu Streamlit Cloud/Python-Version**  
-Wenn dein Deployment-Log Python **3.13** zeigt, pinne die Runtime auf **3.12**, da einige Wheels (z. B. pandas) auf 3.13 Probleme machen können.
+Diese Streamlit-App dient zur Dokumentation und Verwaltung von PV-Komponenten.
+Sie ermöglicht die Erfassung von Projektmetadaten, Komponenteninformationen sowie die Generierung von PDF- und Excel-Dokumenten.
 
-## Quickstart
+## Funktionen
+- Eingabe von Projekt- und Komponenteninformationen
+- Berechnung von Garantieenden
+- Export als PDF und Excel
+
+## Installation
 ```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-streamlit run app.py
 ```
 
-## Deployment (Streamlit Cloud)
-Lege **eine** der folgenden Dateien ins Repo:
-- `runtime.txt` mit Inhalt: `3.12`
-- **oder** `.python-version` mit Inhalt: `3.12.0`
+## Starten der App
+```bash
+streamlit run app_2_cleaned.py
+```
+
+## Hinweise
+- Die App benötigt Python 3.10 oder höher.
+- Für die PDF-Erstellung wird `reportlab` verwendet.
+
+## Assets
+Bilder oder Logos können im Ordner `assets/` abgelegt werden.
